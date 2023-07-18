@@ -20,3 +20,11 @@ const closeModal = function () {
 };
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+// close the window with keyboard
+document.addEventListener('keydown', function (e) {
+  // console.log(e.key);
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
